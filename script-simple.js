@@ -156,16 +156,16 @@ class Portfolio {
             const section = document.createElement('div');
             section.className = 'mb-8';
             section.innerHTML = `
-                <h3 class="text-xl font-semibold mb-4 text-purple-600">${category.charAt(0).toUpperCase() + category.slice(1)} Skills</h3>
+                <h3 class="text-xl font-semibold mb-4 text-white">${category.charAt(0).toUpperCase() + category.slice(1)} Skills</h3>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                     ${categorySkills.map(skill => `
-                        <div class="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                        <div class="bg-gray-800 p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow">
                             <div class="flex justify-between items-center mb-2">
-                                <span class="font-medium">${skill.name}</span>
-                                <span class="text-sm text-purple-600">${skill.level}</span>
+                                <span class="font-medium text-white">${skill.name}</span>
+                                <span class="text-sm text-gray-300">${skill.level}</span>
                             </div>
-                            <div class="w-full bg-gray-200 rounded-full h-2">
-                                <div class="bg-purple-600 h-2 rounded-full" style="width: ${this.getSkillPercentage(skill.level)}%"></div>
+                            <div class="w-full bg-gray-700 rounded-full h-2">
+                                <div class="bg-white h-2 rounded-full" style="width: ${this.getSkillPercentage(skill.level)}%"></div>
                             </div>
                         </div>
                     `).join('')}
@@ -196,21 +196,26 @@ class Portfolio {
 
     createProjectCard(project) {
         const div = document.createElement('div');
-        div.className = `bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow ${project.featured ? 'ring-2 ring-purple-500' : ''}`;
+        div.className = `bg-gray-800 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow ${project.featured ? 'ring-2 ring-white' : ''}`;
         
         div.innerHTML = `
-            <img src="${project.imageUrl}" alt="${project.title}" class="w-full h-48 object-cover">
+            <div class="h-48 bg-gradient-to-br from-gray-700 to-gray-800 flex items-center justify-center">
+                <div class="text-center">
+                    <i class="fas fa-code text-4xl text-white mb-2"></i>
+                    <p class="text-gray-300 text-sm">Project ${project.title.split(' ')[0]}</p>
+                </div>
+            </div>
             <div class="p-6">
-                <h3 class="text-xl font-semibold mb-2">${project.title}</h3>
-                <p class="text-gray-600 mb-4">${project.description}</p>
+                <h3 class="text-xl font-semibold mb-2 text-white">${project.title}</h3>
+                <p class="text-gray-300 mb-4">${project.description}</p>
                 <div class="flex flex-wrap gap-2 mb-4">
                     ${project.technologies.map(tech => `
-                        <span class="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-sm">${tech}</span>
+                        <span class="px-3 py-1 bg-gray-700 text-white rounded-full text-sm">${tech}</span>
                     `).join('')}
                 </div>
                 <div class="flex justify-between">
-                    ${project.liveUrl ? `<a href="${project.liveUrl}" target="_blank" class="text-purple-600 hover:text-purple-800 font-medium">Live Demo</a>` : ''}
-                    ${project.githubUrl ? `<a href="${project.githubUrl}" target="_blank" class="text-gray-600 hover:text-gray-800 font-medium">GitHub</a>` : ''}
+                    ${project.liveUrl ? `<a href="${project.liveUrl}" target="_blank" class="text-white hover:text-gray-300 font-medium">Live Demo</a>` : ''}
+                    ${project.githubUrl ? `<a href="${project.githubUrl}" target="_blank" class="text-gray-400 hover:text-gray-200 font-medium">GitHub</a>` : ''}
                 </div>
             </div>
         `;
