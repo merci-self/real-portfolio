@@ -1,28 +1,19 @@
 {
-  "name": "pot-folio",
+  "name": "merci-niyonizeye-portfolio",
   "version": "1.0.0",
-  "description": "Portfolio project",
-  "main": "index.js",
-  "type": "module",
+  "description": "Portfolio website - ready for deployment",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "node index.js",
-    "start": "node index.js",
-    "seed": "node backend/src/script/seedData.js",
-    "setup": "npm install && npm run seed",
-    "deploy": "vercel --prod",
-    "deploy:preview": "vercel"
+    "dev": "echo 'Open index.html directly in browser or use any static server'",
+    "start": "echo 'Open index.html directly in browser or use any static server'",
+    "deploy": "echo 'Ready for deployment - upload frontend folder to any hosting'"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "bcrypt": "^6.0.0",
-    "cors": "^2.8.6",
-    "dotenv": "^17.4.2",
-    "express": "^5.2.1",
-    "mysql2": "^3.22.0",
-    "nodemailer": "^8.0.7",
-    "sequelize": "^6.37.8"
+  "keywords": [
+    "portfolio",
+    "frontend",
+    "static"
+  ],
+  "author": "Merci Niyonizeye",
+  "devDependencies": {
+    "vite": "^8.0.10"
   }
 }
