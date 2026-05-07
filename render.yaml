@@ -1,0 +1,12 @@
+services:
+  # Static HTML Site
+  - type: web
+    name: merci-portfolio
+    env: static
+    buildCommand: "echo 'Static build complete'"
+    staticPublishPath: .
+    nodeVersion: "18"
+    headers:
+      - path: /*
+        name: Cache-Control
+        value: no-cache, no-store, must-revalidate

@@ -2,10 +2,6 @@
   "name": "merci-niyonizeye-portfolio",
   "version": "1.0.0",
   "description": "Portfolio website - ready for deployment",
-  "scripts": {
-    "build": "echo 'Static build complete'",
-    "start": "echo 'Static site ready'"
-  },
   "keywords": [
     "portfolio",
     "frontend",
