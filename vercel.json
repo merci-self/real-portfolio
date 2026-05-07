@@ -1,7 +1,11 @@
 {
   "version": 2,
   "name": "merci-niyonizeye-portfolio",
-  "builds": [],
+  "buildCommand": "echo 'Static build complete'",
+  "outputDirectory": ".",
+  "installCommand": "echo 'No dependencies needed'",
+  "framework": null,
+  "functions": {},
   "routes": [
     {
       "src": "/(.*)",
