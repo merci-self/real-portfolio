@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "name": "merci-niyonizeye-portfolio",
+  "builds": [],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/$1"
+    }
+  ]
+}

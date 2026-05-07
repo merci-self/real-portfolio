@@ -3,17 +3,13 @@
   "version": "1.0.0",
   "description": "Portfolio website - ready for deployment",
   "scripts": {
-    "dev": "echo 'Open index.html directly in browser or use any static server'",
-    "start": "echo 'Open index.html directly in browser or use any static server'",
-    "deploy": "echo 'Ready for deployment - upload frontend folder to any hosting'"
+    "build": "echo 'Static build complete'",
+    "start": "echo 'Static site ready'"
   },
   "keywords": [
     "portfolio",
     "frontend",
     "static"
   ],
-  "author": "Merci Niyonizeye",
-  "devDependencies": {
-    "vite": "^8.0.10"
-  }
+  "author": "Merci Niyonizeye"
 }
